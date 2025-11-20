@@ -20,6 +20,12 @@ let bot_result = document.querySelector("#bot_result");
 
 let winner = document.querySelector("#winner");
 
+const box1 = document.querySelector("#box1");
+let userf_result = document.querySelector("#userf_result");
+let botf_result = document.querySelector("#botf_result");
+const final_winner = document.querySelector("#final_winner");
+
+
 let choice = ["Stone","Paper","Scissor"];
 let match_count = 0;
 let user_won = 0;
@@ -57,12 +63,21 @@ function update_content(user_choice){
 function check_count() {
     if(match_count === 10){
         if(user_won == cpu_won){
-            alert(`Game over\nThe Match is Drawn with score ${user_won} - ${cpu_won}`);
+            final_winner.innerText = `Game Draw`;
+            userf_result.innerText = user_won;
+            bot_result.innerText = cpu_won;
+            resMes();
         }else if(user_won<cpu_won){
-            alert(`Game over\nBOT won with score ${user_won} - ${cpu_won}`);
+            final_winner.innerText = `You win The game!\n Congrats`;
+            userf_result.innerText = user_won;
+            bot_result.innerText = cpu_won;
+            resMes();
         }
         else{
-            alert(`Game over\nYou won with score ${user_won} - ${cpu_won}`);
+            final_winner.innerText = `You loose\n Try again!`;
+            userf_result.innerText = user_won;
+            bot_result.innerText = cpu_won;
+            resMes();
         }
         match_count = 0;
         user_won = 0;
@@ -102,16 +117,33 @@ scissor_button.addEventListener("click",()=>{
     }
 })
 
-const game_sec = document.querySelector("#game_sec");
-console.log(game_sec)
+let messageTimeout;  // global variable
 
 function showMessage() {
     box.style.display = "block";
     game_sec.style.display = "none";
-    setTimeout(() => {
+
+    messageTimeout = setTimeout(() => {
         game_sec.style.display = "flex";
         box.style.display = "none";
-    }, 3000);
+    }, 4000);
 }
 
+function resMes() {
+    box1.style.display = "block";
+    game_sec.style.display = "none";
+    box.style.display = "none";
+    setTimeout(() => {
+        game_sec.style.display = "flex";
+        box1.style.display = "none";
+    }, 4000);
+}
+
+const remove_early = document.querySelector("#message1_ok");
+
+remove_early.addEventListener("click", () => {
+    clearTimeout(messageTimeout);   // stops the timer
+    game_sec.style.display = "flex";
+    box.style.display = "none";
+});
 
