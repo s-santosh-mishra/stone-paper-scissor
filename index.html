@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/330033b57f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="headding">Stone - Paper - Scissor</h1>
+    <div class="message_container">
+        <div class="message">
+            <div class="message_content">
+                <h2>Hello User!</h2><br><br>
+                <p>Welcome to the Stone Paper Scissor game</p>
+                <p>You will be given 10 chances...After 10 chances the game will automatically RESTART</p>Good Luck!<p></p><br><br>
+                <button id="message_ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id= "game_sec" class="game_section invisible2">
+        <div class="game_container">
+            <div class="game_header">
+                <div class="game_score">
+                    <span>Game no : <span id="game_count">0</span></span>
+                </div>
+            </div>
+            <div class="options">
+                <div class="img_container"><img src="image.png" alt="The stone Option"><button id="stone_button">Stone</button></div>
+                <div class="img_container"><img src="img3.png" alt="The Paper Option"><button id="paper_button">Paper</button></div>
+                <div class="img_container"><img src="img2.png" alt="The Scissor Option"><button id="scissor_button">Scissor</button></div>
+            </div>
+            <div class="game_header">
+                <div class="game_score">
+                    <span>User : <span id="user_score">0</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>Bot : <span id="bot_score">0</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div  class="message_container">
+        <div id ="box" class="message match_score">
+            <div class=" message_content message_content2">
+                <h2 id="last_msg" style="margin-top: 20px;">Match Over</h2><br><h2><span id="winner"></span></h2><br><br>
+                <div class="game_scor">
+                    <span>You choose : <span id="user_result"></span></span>
+                        <br>
+                    <span>Bot Choose : <span id="bot_result"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="zlogic.js"></script>
+</body>
+
+</html>

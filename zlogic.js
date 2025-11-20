@@ -1,0 +1,117 @@
+const okay_button = document.querySelector("#message_ok");
+const message_container = document.querySelector(".message_container");
+const game_section = document.querySelector(".game_section");
+
+okay_button.addEventListener('click',()=>{
+    message_container.classList.add("invisible");
+    game_section.classList.remove("invisible2");
+})
+
+const stone_button = document.querySelector("#stone_button")
+const paper_button = document.querySelector("#paper_button")
+const scissor_button = document.querySelector("#scissor_button")
+
+let game_count_span = document.querySelector("#game_count");
+let user_won_span = document.querySelector("#user_score");
+let cpu_won_span = document.querySelector("#bot_score");
+
+let user_result = document.querySelector("#user_result");
+let bot_result = document.querySelector("#bot_result");
+
+let winner = document.querySelector("#winner");
+
+let choice = ["Stone","Paper","Scissor"];
+let match_count = 0;
+let user_won = 0;
+let cpu_won = 0;
+
+
+function match(user_choice) {
+    const cpu_choice = Math.floor(Math.random() * (3 - 0)) + 0;
+    match_count++;
+    bot_result.innerText = choice[cpu_choice];
+    if(user_choice == cpu_choice){
+        cpu_won++;
+        user_won++;
+        winner.innerText = "Match Tied";
+        return;
+    }
+    if(user_choice === 0 && cpu_choice===2 || user_choice === 1 && cpu_choice === 0 || user_choice===2 && cpu_choice===1){
+        user_won++;
+        winner.innerText = "You won";
+        return;
+    }else{
+        cpu_won++;
+        winner.innerText = "Bot won";
+        return;
+    }
+}
+
+function update_content(user_choice){
+    game_count_span.innerText = match_count;
+    user_won_span.innerText = user_won;
+    cpu_won_span.innerText = cpu_won;
+    user_result.innerText = choice[user_choice];
+}
+
+function check_count() {
+    if(match_count === 10){
+        if(user_won == cpu_won){
+            alert(`Game over\nThe Match is Drawn with score ${user_won} - ${cpu_won}`);
+        }else if(user_won<cpu_won){
+            alert(`Game over\nBOT won with score ${user_won} - ${cpu_won}`);
+        }
+        else{
+            alert(`Game over\nYou won with score ${user_won} - ${cpu_won}`);
+        }
+        match_count = 0;
+        user_won = 0;
+        cpu_won = 0;
+        update_content();
+        return 1;
+    }
+}
+
+stone_button.addEventListener("click",()=>{
+    const user_choice = 0;
+    match(user_choice);
+    update_content(user_choice);
+    showMessage();
+    if(check_count()){
+        return;
+    }
+})
+
+paper_button.addEventListener("click",()=>{
+    const user_choice = 1;
+    match(user_choice);
+    update_content(user_choice);
+    showMessage();
+    if(check_count()){
+        return;
+    }
+})
+
+scissor_button.addEventListener("click",()=>{
+    const user_choice = 2;
+    match(user_choice);
+    update_content(user_choice);
+    showMessage();
+    if(check_count()){
+        return;
+    }
+})
+
+const game_sec = document.querySelector("#game_sec");
+console.log(game_sec)
+
+function showMessage() {
+    box.style.display = "block";
+    game_sec.style.display = "none";
+    setTimeout(() => {
+        game_sec.style.display = "flex";
+        box.style.display = "none";
+    }, 3000);
+}
+
+
