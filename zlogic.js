@@ -25,7 +25,6 @@ let userf_result = document.querySelector("#userf_result");
 let botf_result = document.querySelector("#botf_result");
 const final_winner = document.querySelector("#final_winner");
 
-
 let choice = ["Stone","Paper","Scissor"];
 let match_count = 0;
 let user_won = 0;
@@ -65,18 +64,18 @@ function check_count() {
         if(user_won == cpu_won){
             final_winner.innerText = `Game Draw`;
             userf_result.innerText = user_won;
-            bot_result.innerText = cpu_won;
+            botf_result.innerText = cpu_won;
             resMes();
         }else if(user_won<cpu_won){
-            final_winner.innerText = `You win The game!\n Congrats`;
+            final_winner.innerText = `You loose\n Try again!`;
             userf_result.innerText = user_won;
-            bot_result.innerText = cpu_won;
+            botf_result.innerText = cpu_won;
             resMes();
         }
         else{
-            final_winner.innerText = `You loose\n Try again!`;
+            final_winner.innerText = `You win The game!\n Congrats`;
             userf_result.innerText = user_won;
-            bot_result.innerText = cpu_won;
+            botf_result.innerText = cpu_won;
             resMes();
         }
         match_count = 0;
@@ -142,7 +141,7 @@ function resMes() {
 const remove_early = document.querySelector("#message1_ok");
 
 remove_early.addEventListener("click", () => {
-    clearTimeout(messageTimeout);   // stops the timer
+    clearTimeout(messageTimeout);   
     game_sec.style.display = "flex";
     box.style.display = "none";
 });
