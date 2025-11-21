@@ -30,19 +30,40 @@ button:hover {
     box-shadow: 0 0 10px white;
 }
 
-h1 {
-    font-size: 40px;
+h1 { 
     text-align: center;
-    color: rgb(255, 255, 255);
-    height: 70px;
-    background-color: rgb(31, 30, 30);
 }
 
 .headding {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    color: rgb(255, 255, 255);
+    height: 70px;
+    background-color: rgb(31, 30, 30);
+    font-size: 20px;
 }
+
+.headding div{
+    margin-inline: 30px;
+}
+
+.sub_headd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.sub_headd i{
+   margin-bottom: 8px;
+}
+.sub_headd:hover{
+   color: aqua;
+   cursor: pointer;
+}
+
 
 .message {
     height: 330px;
