@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-Paper_Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1 class="headding">Stone - Paper - Scissor</h1>
+    <div class="message_container">
+        <div class="message">
+            <div class="message_content smsg">
+                <h2>Hello User!</h2><br>
+                <p>Welcome to the Stone Paper Scissor game</p>
+                <p>You will be given 10 chances...After 10 chances the game will automatically RESTART</p><p>Good Luck!</p><br>
+                <button id="message_ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game_sec" class="game_section invisible2">
+        <div class="game_container">
+            <div class="game_header">
+                <div class="game_score">
+                    <span>Game no : <span id="game_count">0</span></span>
+                </div>
+            </div>
+            <div class="options">
+                <div class="img_container"><img src="stone.png" alt="The stone Option" id="stone_image"><button
+                        id="stone_button">Stone</button></div>
+                <div class="img_container"><img src="paper.png" alt="The Paper Option" id="paper_image"><button
+                        id="paper_button">Paper</button></div>
+                <div class="img_container"><img src="scissor.png" alt="The Scissor Option" id="scissor_image"><button id="scissor_button">Scissor</button></div>
+            </div>
+            <div class="game_header">
+                <div class="game_score">
+                    <span>User : <span id="user_score">0</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>Bot : <span id="bot_score">0</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="message_container">
+        <div id="box" class="message match_score">
+            <div class=" message_content message_content2">
+                <h2 id="last_msg" style="margin-top: 20px;">Match Over</h2><br>
+                <h2><span id="winner"></span></h2><br><br>
+                <div class="game_scor">
+                    <span>You choose : <span id="user_result"></span></span>
+                    <br>
+                    <span>Bot Choose : <span id="bot_result"></span></span>
+                </div><br>
+                <button id="message1_ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="message_container" style="margin-top: 0;">
+        <div id="box1" class="message match_score">
+            <div class=" message_content message_content2">
+                <h2 id="last_msg" style="margin-top: 20px;">Game Over</h2><br>
+                <h2><span id="final_winner"></span></h2><br><br>
+                <div class="game_scor">
+                    <span>Your Final score : <span id="userf_result"></span></span>
+                    <br>
+                    <span>Bot's Final score : <span id="botf_result"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="single_player.js"></script>
+</body>
+
+</html>

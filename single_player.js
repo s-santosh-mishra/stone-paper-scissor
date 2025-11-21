@@ -86,6 +86,40 @@ function check_count() {
     }
 }
 
+const stone_image = document.querySelector("#stone_image");
+const paper_image = document.querySelector("#paper_image");
+const scissor_image = document.querySelector("#scissor_image");
+
+stone_image.addEventListener("click", () => {
+    const user_choice = 0;
+    match(user_choice);
+    update_content(user_choice);
+    showMessage();
+    if (check_count()) {
+        return;
+    }
+})
+
+paper_image.addEventListener("click", () => {
+    const user_choice = 1;
+    match(user_choice);
+    update_content(user_choice);
+    showMessage();
+    if (check_count()) {
+        return;
+    }
+})
+
+scissor_image.addEventListener("click", () => {
+    const user_choice = 2;
+    match(user_choice);
+    update_content(user_choice);
+    showMessage();
+    if (check_count()) {
+        return;
+    }
+})
+
 stone_button.addEventListener("click", () => {
     const user_choice = 0;
     match(user_choice);
