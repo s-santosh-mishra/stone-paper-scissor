@@ -21,43 +21,76 @@
 
     .options img {
         display: block;
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
         margin-inline: 5px;
     }
 
-    .game_container{
-        width:80%;
-        height: 350px;
+    .game_container {
+        width: 90%;
+        height: 450px;
     }
 
-    .game_score{
-    font-size: 20px;
+    .game_score {
+        font-size: 20px;
     }
 
-    .game_container h2{
-    text-align: center;
-    margin-block: 15px;
-    font-size:25px;
+    .game_container h2 {
+        text-align: center;
+        margin-block: 15px;
+        font-size: 25px;
     }
 
-    .game_scor{
-    font-size: 20px;
-}
+    .game_scor {
+        font-size: 20px;
+    }
+
+    .game_section {
+        margin-top: 70px;
+    }
+
+    .options {
+        margin-top: 70px;
+    }
+
+    img {
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 479px) {
     body {
-        background-size: cover;
-        background-repeat: no-repeat;
+        width: 100vw;
+        width: 100vw;
+        background-size: 100%;
         background-position: center;
+        overflow: auto;
     }
 
     h1 {
         font-size: 25px;
     }
 
+    .options img {
+        display: block;
+        height: 100px;
+        width: 100px;
+        margin-inline: 5px;
+    }
+
     .message {
         margin-inline: 20px;
+    }
+
+    .game_section {
+        margin-top: 70px;
+    }
+
+    .options {
+        margin-top: 70px;
+    }
+
+    img {
+        margin-bottom: 50px;
     }
 }
