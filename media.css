@@ -62,7 +62,7 @@
     body {
         width: 100dvw;
         height: 100dvh;
-        background-size: 300%;
+        background-size: 350%;
         background-position: center;
         overflow: auto;
     }
@@ -83,11 +83,11 @@
     }
 
     .game_section {
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .options {
-        margin-top: 70px;
+        margin-top: 40px;
     }
 
     img {
@@ -95,10 +95,14 @@
     }
 
     .match_score{
-        margin-top: 70px;
+        margin-top: 50px;
     }
 
     .smsg{
     padding-block:20px;
+}
+
+.message_container{
+    margin-top: 10px;
 }
 }
