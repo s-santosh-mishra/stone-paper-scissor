@@ -1,7 +1,63 @@
 @media screen and (max-width: 991px) {
+    body {
+        width: 100vw;
+        width: 100vw;
+        background-size: 100%;
+        background-position: center;
+        overflow: auto;
+    }
 
+    h1 {
+        font-size: 30px;
+    }
+
+    .message {
+        margin-inline: 20px;
+    }
+
+    .message_container {
+        margin-top: 50px;
+    }
+
+    .options img {
+        display: block;
+        height: 100px;
+        width: 100px;
+        margin-inline: 5px;
+    }
+
+    .game_container{
+        width:80%;
+        height: 350px;
+    }
+
+    .game_score{
+    font-size: 20px;
+    }
+
+    .game_container h2{
+    text-align: center;
+    margin-block: 15px;
+    font-size:25px;
+    }
+
+    .game_scor{
+    font-size: 20px;
+}
 }
 
 @media screen and (max-width: 479px) {
-    
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .message {
+        margin-inline: 20px;
+    }
 }
