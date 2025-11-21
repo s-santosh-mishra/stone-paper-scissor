@@ -94,15 +94,15 @@
         margin-bottom: 50px;
     }
 
-    .match_score{
+    .match_score {
         margin-top: 50px;
     }
 
-    .smsg{
-    padding-block:20px;
-}
+    .smsg {
+        padding-block: 20px;
+    }
 
-.message_container{
-    margin-top: 50px;
-}
+    .message_container {
+        margin-top: 50px;
+    }
 }

@@ -2,7 +2,7 @@ const okay_button = document.querySelector("#message_ok");
 const message_container = document.querySelector(".message_container");
 const game_section = document.querySelector(".game_section");
 
-okay_button.addEventListener('click',()=>{
+okay_button.addEventListener('click', () => {
     message_container.classList.add("invisible");
     game_section.classList.remove("invisible2");
 })
@@ -25,7 +25,7 @@ let userf_result = document.querySelector("#userf_result");
 let botf_result = document.querySelector("#botf_result");
 const final_winner = document.querySelector("#final_winner");
 
-let choice = ["Stone","Paper","Scissor"];
+let choice = ["Stone", "Paper", "Scissor"];
 let match_count = 0;
 let user_won = 0;
 let cpu_won = 0;
@@ -35,24 +35,24 @@ function match(user_choice) {
     const cpu_choice = Math.floor(Math.random() * (3 - 0)) + 0;
     match_count++;
     bot_result.innerText = choice[cpu_choice];
-    if(user_choice == cpu_choice){
+    if (user_choice == cpu_choice) {
         cpu_won++;
         user_won++;
         winner.innerText = "Match Tied";
         return;
     }
-    if(user_choice === 0 && cpu_choice===2 || user_choice === 1 && cpu_choice === 0 || user_choice===2 && cpu_choice===1){
+    if (user_choice === 0 && cpu_choice === 2 || user_choice === 1 && cpu_choice === 0 || user_choice === 2 && cpu_choice === 1) {
         user_won++;
         winner.innerText = "You won";
         return;
-    }else{
+    } else {
         cpu_won++;
         winner.innerText = "Bot won";
         return;
     }
 }
 
-function update_content(user_choice){
+function update_content(user_choice) {
     game_count_span.innerText = match_count;
     user_won_span.innerText = user_won;
     cpu_won_span.innerText = cpu_won;
@@ -60,19 +60,19 @@ function update_content(user_choice){
 }
 
 function check_count() {
-    if(match_count === 10){
-        if(user_won == cpu_won){
+    if (match_count === 10) {
+        if (user_won == cpu_won) {
             final_winner.innerText = `Game Draw`;
             userf_result.innerText = user_won;
             botf_result.innerText = cpu_won;
             resMes();
-        }else if(user_won<cpu_won){
+        } else if (user_won < cpu_won) {
             final_winner.innerText = `You loose\n Try again!`;
             userf_result.innerText = user_won;
             botf_result.innerText = cpu_won;
             resMes();
         }
-        else{
+        else {
             final_winner.innerText = `You win The game!\n Congrats`;
             userf_result.innerText = user_won;
             botf_result.innerText = cpu_won;
@@ -86,32 +86,32 @@ function check_count() {
     }
 }
 
-stone_button.addEventListener("click",()=>{
+stone_button.addEventListener("click", () => {
     const user_choice = 0;
     match(user_choice);
     update_content(user_choice);
     showMessage();
-    if(check_count()){
+    if (check_count()) {
         return;
     }
 })
 
-paper_button.addEventListener("click",()=>{
+paper_button.addEventListener("click", () => {
     const user_choice = 1;
     match(user_choice);
     update_content(user_choice);
     showMessage();
-    if(check_count()){
+    if (check_count()) {
         return;
     }
 })
 
-scissor_button.addEventListener("click",()=>{
+scissor_button.addEventListener("click", () => {
     const user_choice = 2;
     match(user_choice);
     update_content(user_choice);
     showMessage();
-    if(check_count()){
+    if (check_count()) {
         return;
     }
 })
@@ -141,7 +141,7 @@ function resMes() {
 const remove_early = document.querySelector("#message1_ok");
 
 remove_early.addEventListener("click", () => {
-    clearTimeout(messageTimeout);   
+    clearTimeout(messageTimeout);
     game_sec.style.display = "flex";
     box.style.display = "none";
 });
