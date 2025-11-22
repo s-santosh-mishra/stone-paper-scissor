@@ -9,3 +9,10 @@ okay_button.addEventListener('click', () => {
     game_section.classList.remove("invisible2");
 })
 
+const hamburg = document.querySelector("#hamburg");
+const tdot_show = document.querySelector(".tdot_show");
+
+
+hamburg.addEventListener("click",()=>{
+    tdot_show.classList.toggle("tdot_hide");
+})

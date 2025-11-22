@@ -74,6 +74,7 @@ h1 {
     background-size: cover;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .message_content {

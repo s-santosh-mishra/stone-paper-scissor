@@ -7,18 +7,41 @@
     <title>Stone-Paper_Scissor</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="main_style.css">
-    <link rel="stylesheet" href="media.css">
+    <!-- <link rel="stylesheet" href="media.css"> -->
     <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
 </head>
 
 <body>
+
     <div class="headding">
-        <div><a href="multiplayer.html" class="sub_headd"><i class="fa-solid fa-robot"></i><span>Switch mode</span></a>
+        <div class="tdot">
+            <i class="fa-solid fa-bars sub_headd" id="hamburg"></i>
+        </div>
+        <div class="hambrg">
+            <a href="single_player.html" class="sub_headd"><i class="fa-solid fa-robot"></i><span>Switch Mode</span></a>
         </div>
         <h1>Stone - Paper - Scissor</h1>
-        <div class="sub_headd"><a
-                href="https://www.linkedin.com/in/santosh-mishra-087b36307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank" class="sub_headd"><i class="fa-solid fa-code"></i>Developer Site</a></div>
+        <div class="hambrg">
+            <div class="sub_headd"><a
+                    href="https://www.linkedin.com/in/santosh-mishra-087b36307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank" class="sub_headd"><i class="fa-solid fa-code"></i><span>Developer Site</span></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tdot_show">
+        <div>
+            <a href="multiplayer.html" class="sub_headd">
+                <i class="fa-solid fa-robot"></i><span>Switch Mode</span>
+            </a>
+        </div>
+
+        <div>
+            <a href="https://www.linkedin.com/in/santosh-mishra-087b36307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="sub_headd"><i class="fa-brands fa-linkedin"></i><span>linkedin</span>
+            </a>
+        </div>
     </div>
 
     <div class="message_container">
@@ -34,24 +57,26 @@
         </div>
     </div>
 
+    <div class="mul_game_container invisible2">
+        <div class="">
+            <div class="">
+                <span>Game no : <span id="">0</span></span>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="">
+                <span>Player 1: <span id="">0</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Player 2: <span id="">0</span></span>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <div id="game_sec" class="game_section invisible2">
         <div class="game_container">
-            <div class="game_info">
-                <div class="game_header">
-                    <div class="game_score">
-                        <span>Game no : <span id="game_count">0</span></span>
-                    </div>
-                </div>
-
-                <div class="game_header">
-                    <div class="game_score">
-                        <span>Player 1: <span id="user_score">0</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span>Player 2: <span id="bot_score">0</span></span>
-                    </div>
-                </div>
-            </div>
-
 
             <div class="multiplayer_area">
 
@@ -61,6 +86,17 @@
                     <div class="img_container"><img src="scissor.png" alt="The Scissor Option" id="scissor_image1">
                     </div>
                 </div>
+
+
+                <div class="options mul_info">
+                    <h3 class="info">Player <span id="player_no"></span>'s Turn</h3>
+                    <div class="img_container">
+                        <img src="vs.png" alt="The VS Option" id="stone_image2">
+                        <h3 class="info">After both players choosed their options tap on VS icon to start the match
+                        </h3>
+                    </div>
+                </div>
+
 
                 <div class="options player2">
                     <div class="img_container"><img src="stone.png" alt="The stone Option" id="stone_image2"></div>
@@ -91,6 +127,8 @@
             </div>
         </div>
     </div>
+
+
 
     <div class="message_container" style="margin-top: 0;">
         <div id="box1" class="message match_score">
