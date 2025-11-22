@@ -56,6 +56,23 @@
     img {
         margin-bottom: 50px;
     }
+    .tdot{
+        height: 50px;
+        width: 50px;
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        margin: 0 !important;
+    }
+
+    .headding{
+        justify-content: center;
+    }
+    .hambrg{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 479px) {
@@ -105,4 +122,6 @@
     .message_container {
         margin-top: 50px;
     }
+
+
 }

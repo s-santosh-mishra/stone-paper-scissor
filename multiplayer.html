@@ -5,24 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone-Paper_Scissor</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="main_style.css">
     <link rel="stylesheet" href="media.css">
     <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
 </head>
+
 <body>
     <div class="headding">
-        <div><a href="multiplayer.html" class="sub_headd"><i class="fa-solid fa-robot"></i><span>Switch mode</span></a></div>
+        <div><a href="multiplayer.html" class="sub_headd"><i class="fa-solid fa-robot"></i><span>Switch mode</span></a>
+        </div>
         <h1>Stone - Paper - Scissor</h1>
-        <div class="sub_headd"><a href="https://www.linkedin.com/in/santosh-mishra-087b36307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="sub_headd"><i class="fa-solid fa-code"></i>Developer Site</a></div>
+        <div class="sub_headd"><a
+                href="https://www.linkedin.com/in/santosh-mishra-087b36307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="sub_headd"><i class="fa-solid fa-code"></i>Developer Site</a></div>
     </div>
-    
+
     <div class="message_container">
         <div class="message">
             <div class="message_content smsg">
                 <h2>Hello User!</h2><br>
                 <p>Again welcome to the Stone Paper Scissor game</p>
-                <p>There will be 10 matches total...<br>After 10 matches the WINNER will be decided and the game will RESTART automatically after 4 seconds.</p><p>Have fun!</p><br>
+                <p>There will be 10 matches total...<br>After 10 matches the WINNER will be decided and the game will
+                    RESTART automatically after 4 seconds.</p>
+                <p>Have fun!</p><br>
                 <button id="message_ok">OK</button>
             </div>
         </div>
@@ -31,24 +37,42 @@
 
     <div id="game_sec" class="game_section invisible2">
         <div class="game_container">
-            <div class="game_header">
-                <div class="game_score">
-                    <span>Game no : <span id="game_count">0</span></span>
+            <div class="game_info">
+                <div class="game_header">
+                    <div class="game_score">
+                        <span>Game no : <span id="game_count">0</span></span>
+                    </div>
+                </div>
+
+                <div class="game_header">
+                    <div class="game_score">
+                        <span>Player 1: <span id="user_score">0</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>Player 2: <span id="bot_score">0</span></span>
+                    </div>
                 </div>
             </div>
-            <div class="options">
-                <div class="img_container"><img src="stone.png" alt="The stone Option" id="stone_image"><button
-                        id="stone_button">Stone</button></div>
-                <div class="img_container"><img src="paper.png" alt="The Paper Option" id="paper_image"><button
-                        id="paper_button">Paper</button></div>
-                <div class="img_container"><img src="scissor.png" alt="The Scissor Option" id="scissor_image"><button id="scissor_button">Scissor</button></div>
-            </div>
-            <div class="game_header">
-                <div class="game_score">
-                    <span>Player 1: <span id="user_score">0</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span>Player 2: <span id="bot_score">0</span></span>
+
+
+            <div class="multiplayer_area">
+
+                <div class="options player1">
+                    <div class="img_container"><img src="stone.png" alt="The stone Option1" id="stone_image"></div>
+                    <div class="img_container"><img src="paper.png" alt="The Paper Option1" id="paper_image"></div>
+                    <div class="img_container"><img src="scissor.png" alt="The Scissor Option" id="scissor_image1">
+                    </div>
                 </div>
+
+                <div class="options player2">
+                    <div class="img_container"><img src="stone.png" alt="The stone Option" id="stone_image2"></div>
+                    <div class="img_container"><img src="paper.png" alt="The Paper Option" id="paper_image2"></div>
+                    <div class="img_container"><img src="scissor.png" alt="The Scissor Option" id="scissor_image2">
+                    </div>
+                </div>
+
             </div>
+
+
+
         </div>
     </div>
 
@@ -82,8 +106,8 @@
         </div>
     </div>
 
-<script src="multi_player.js"></script>
-<script src="https://kit.fontawesome.com/330033b57f.js" crossorigin="anonymous"></script>
+    <script src="multi_player.js"></script>
+    <script src="https://kit.fontawesome.com/330033b57f.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
