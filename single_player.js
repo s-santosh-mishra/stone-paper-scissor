@@ -158,7 +158,7 @@ scissor_button.addEventListener("click", () => {
     }
 })
 
-let messageTimeout;  // global variable
+let messageTimeout;
 
 function showMessage() {
     box.style.display = "block";

@@ -8,8 +8,8 @@ body {
     color: white;
     background-image: url("image\ \(1\).jpeg");
     background-size: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 500vh;
+    /* overflow: hidden; */
 } 
 
 button {
@@ -63,7 +63,6 @@ h1 {
    color: aqua;
    cursor: pointer;
 }
-
 
 .message {
     height: 330px;
@@ -225,9 +224,9 @@ h1 {
 
 /* for js */
 
-.invisible {
+/* .invisible {
     display: none;
-}
+} 
 
 .invisible2 {
     display: none;
@@ -240,6 +239,11 @@ h1 {
 #box1 {
     display: none;
 }
+
+.invi{
+    visibility: hidden;
+} */
+
 
 .tdot{
     margin: 0;
